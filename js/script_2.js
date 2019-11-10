@@ -4,7 +4,8 @@ loadPolyfills();
 	"use strict";
 
 	// ターゲット指定
-	const targets = Array.from(document.querySelectorAll("img[data-src]"));
+    const targets = Array.from(document.querySelectorAll("img[data-src]"));
+    console.log(targets)
 
 	// 実際の画像パス
 	const img_path = "data-src";
@@ -12,15 +13,16 @@ loadPolyfills();
 	// オプション
 	const options = {
 		// 上下100px手前で発火
-		rootMargin: "100px 0px"
+        rootMargin: "100px 0px"
 	};
 
 	// 初期化
 	const observer = new IntersectionObserver(callback, options);
-
+    //test
 	targets.forEach(function(img) {
 		// 監視の開始
-		observer.observe(img);
+        observer.observe(img);
+        console.log('aaa')
 	});
 
 	// コールバック
