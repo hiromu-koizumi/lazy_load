@@ -14,7 +14,7 @@ loadPolyfills();
 	const options = {
 		// 上下100px手前で発火
         rootMargin: "100px 0px"
-	};
+    };
 
 	// 初期化
 	const observer = new IntersectionObserver(callback, options);
